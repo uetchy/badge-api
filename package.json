@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "author": "Yasuaki Uechi <y@uechi.io> (https://uechi.io)",
   "dependencies": {
+    "badgen": "^3.2.1",
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {

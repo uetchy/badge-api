@@ -1,17 +1,17 @@
-import { NowRequest, NowResponse } from '@vercel/node';
-import fetch from 'node-fetch';
+import { makeBadge } from '../../lib/badge';
+import { json } from '../../lib/fetch';
 
-export default async function (req: NowRequest, res: NowResponse) {
-  try {
-    const targetURL = req.query.url as string;
-    const status = await fetch(
-      `https://bookmark.hatenaapis.com/count/entry?url=https://${encodeURIComponent(
-        targetURL,
-      )}`,
-    ).then((res) => res.text());
-    res.setHeader('Cache-Control', 's-maxage=86400');
-    res.json({ subject: 'hatena', status, color: 'blue' });
-  } catch (err) {
-    res.json({ error: err.message });
-  }
-}
+export default makeBadge(async (query) => {
+  const targetURL = query.url as string;
+  const status = await json(
+    `https://bookmark.hatenaapis.com/count/entry?url=https://${encodeURIComponent(
+      targetURL,
+    )}`,
+  );
+
+  return {
+    label: 'hatena',
+    color: 'blue',
+    status,
+  };
+});
