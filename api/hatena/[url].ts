@@ -9,7 +9,7 @@ export default async function (req: NowRequest, res: NowResponse) {
         targetURL,
       )}`,
     ).then((res) => res.text());
-
+    res.setHeader('Cache-Control', 's-maxage=86400');
     res.json({ subject: 'hatena', status, color: 'blue' });
   } catch (err) {
     res.json({ error: err.message });
