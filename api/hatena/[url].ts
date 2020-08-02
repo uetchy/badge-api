@@ -1,11 +1,10 @@
 import { makeBadge } from '../../lib/badge';
 import { json } from '../../lib/fetch';
 
-export default makeBadge(async (query) => {
-  const targetURL = query.url as string;
+export default makeBadge(async ({ url }) => {
   const status = await json(
     `https://bookmark.hatenaapis.com/count/entry?url=https://${encodeURIComponent(
-      targetURL,
+      url as string,
     )}`,
   );
 
