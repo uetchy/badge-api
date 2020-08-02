@@ -1,8 +1,8 @@
 import { makeBadge } from '../../../lib/badge';
-import { json } from '../../../lib/fetch';
+import { text } from '../../../lib/fetch';
 
 export default makeBadge(async ({ url }) => {
-  const status = await json(
+  const status = await text(
     `https://bookmark.hatenaapis.com/count/entry?url=https://${encodeURIComponent(
       url as string,
     )}`,
