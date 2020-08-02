@@ -17,19 +17,27 @@ export function makeBadge(
   resolve: (query: NowRequestQuery) => Promise<BadgenOptions> | BadgenOptions,
 ) {
   return async (req: NowRequest, res: NowResponse) => {
+    const isFlat = req.query.flat !== undefined;
+    delete req.query.flat;
+
+    res.setHeader('Content-Type', 'image/svg+xml');
+
     try {
-      const isFlat = req.query.flat !== undefined;
-      delete req.query.flat;
       const badge = badgen({
         ...(await Promise.resolve(resolve(req.query))),
         style: isFlat ? 'flat' : 'classic',
       });
 
       res.setHeader('Cache-Control', 's-maxage=86400');
-      res.setHeader('Content-Type', 'image/svg+xml');
       res.send(badge);
     } catch (err) {
-      res.json({ error: err.message });
+      res.send(
+        badgen({
+          label: 'error',
+          color: 'gray',
+          status: err.message,
+        }),
+      );
     }
   };
 }
