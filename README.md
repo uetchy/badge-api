@@ -1,13 +1,31 @@
 # Badge Now
 
+## Badges
+
+### App Store
+
+#### rating
+
 ```
-https://badge.now.sh/<provider>/<url>
+https://badge.now.sh/appstore/rating/:country/:id
 ```
 
-## List of badges
+![](https://badge.now.sh/appstore/rating/us/id1232780281) `https://badge.now.sh/appstore/rating/us/id1232780281`
 
-### Hatena bookmark
+#### rating count
 
-| url                                   | badge                                      |
-| ------------------------------------- | ------------------------------------------ |
-| https://badge.now.sh/hatena/namae.dev | ![](https://badge.now.sh/hatena/namae.dev) |
+```
+https://badge.now.sh/appstore/rating-count/:country/:id
+```
+
+![](https://badge.now.sh/appstore/rating-count/us/id1232780281) `https://badge.now.sh/appstore/rating-count/us/id1232780281`
+
+### Hatena Bookmark
+
+#### bookmark count
+
+```
+https://badge.now.sh/hatena/:url
+```
+
+![](https://badge.now.sh/hatena/namae.dev) `https://badge.now.sh/hatena/namae.dev`
