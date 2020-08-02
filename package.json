@@ -1,0 +1,26 @@
+{
+  "name": "badge",
+  "description": "badge",
+  "version": "0.0.0",
+  "author": "Yasuaki Uechi <y@uechi.io> (https://uechi.io)",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.27",
+    "@types/node-fetch": "^2.5.7",
+    "@vercel/node": "^1.7.4",
+    "typescript": "^3.9.7"
+  },
+  "types": "lib/index.d.ts",
+  "main": "api/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uetchy/badge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uetchy/badge/issues"
+  },
+  "license": "Apache-2.0",
+  "private": true
+}
