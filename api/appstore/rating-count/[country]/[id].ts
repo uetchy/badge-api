@@ -7,7 +7,7 @@ export default makeBadge(async ({ country, id }) => {
   const schema = JSON.parse(
     dom.window.document.querySelector(
       'script[name="schema:software-application"]',
-    ).textContent,
+    )?.textContent ?? '',
   );
 
   if (!schema.aggregateRating) {

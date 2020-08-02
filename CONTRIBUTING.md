@@ -3,7 +3,7 @@
 ## Development Guide
 
 ```bash
-git clone https://github.com/uetchy/badge.git && cd badge
+git clone https://github.com/uetchy/badge.now.sh.git && cd badge.now.sh
 npm install
 
 npm i -g vercel

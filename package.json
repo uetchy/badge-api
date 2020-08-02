@@ -5,13 +5,13 @@
   "author": "Yasuaki Uechi <y@uechi.io> (https://uechi.io)",
   "dependencies": {
     "badgen": "^3.2.1",
-    "jsdom": "^16.3.0",
-    "node-fetch": "^2.6.0"
+    "cross-fetch": "^3.0.5",
+    "graphql-request": "^2.0.0",
+    "jsdom": "^16.3.0"
   },
   "devDependencies": {
     "@types/jsdom": "^16.2.3",
     "@types/node": "^14.0.27",
-    "@types/node-fetch": "^2.5.7",
     "@vercel/node": "^1.7.4",
     "typescript": "^3.9.7"
   },

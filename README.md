@@ -13,6 +13,16 @@ https://badge.now.sh/appstore/:subject/:country/:id
 | rating       | ![](https://badge.now.sh/appstore/rating/us/id1232780281)       | `https://badge.now.sh/appstore/rating/us/id1232780281`       |
 | rating count | ![](https://badge.now.sh/appstore/rating-count/us/id1232780281) | `https://badge.now.sh/appstore/rating-count/us/id1232780281` |
 
+### Product Hunt
+
+```
+https://badge.now.sh/producthunt/:subject/:slug
+```
+
+| subject | badge                                               | url                                              |
+| ------- | --------------------------------------------------- | ------------------------------------------------ |
+| upvotes | ![](https://badge.now.sh/producthunt/upvotes/namae) | `https://badge.now.sh/producthunt/upvotes/namae` |
+
 ### Hatena Bookmark
 
 ```
