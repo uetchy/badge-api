@@ -15,8 +15,6 @@
     "@vercel/node": "^1.7.4",
     "typescript": "^3.9.7"
   },
-  "types": "lib/index.d.ts",
-  "main": "api/index.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/uetchy/badge.git"

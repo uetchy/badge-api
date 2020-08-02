@@ -18,10 +18,19 @@ vc dev
 
 #### File-system routes
 
-If you want your new badge location to be `badge.now.sh/foobar/:param`, then create a file named `[param].ts` in `api/foobar`.
+If you want your new badge location to be `badge.now.sh/foobar/:baz`, then create a file named `[baz].ts` in `api/foobar`.
 
-## Release Guide (Maintainers only)
+```ts
+import { makeBadge } from '../../../lib/badge';
+import { json } from '../../../lib/fetch';
 
-```bash
-np
+export default makeBadge(async ({ baz }) => {
+  const response = await json(`https://example.com/api?q=${baz}`);
+
+  return {
+    label: 'foobar',
+    color: 'magenta',
+    status: response.status,
+  };
+});
 ```
