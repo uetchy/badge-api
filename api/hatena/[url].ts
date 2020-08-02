@@ -10,7 +10,7 @@ export default makeBadge(async ({ url }) => {
 
   return {
     label: 'hatena',
-    color: 'blue',
+    color: '04A4DE',
     status,
   };
 });
