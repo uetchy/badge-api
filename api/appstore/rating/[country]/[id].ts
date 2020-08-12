@@ -17,11 +17,12 @@ export default makeBadge(async ({ country, id }) => {
       status: 'unavailable',
     };
   }
-  const rating = schema.aggregateRating.ratingValue;
+  const rating = parseInt(schema.aggregateRating.ratingValue);
+  const stars = '★'.repeat(rating);
 
   return {
     label: 'rating',
     color: '0070c9',
-    status: rating.toString(),
+    status: stars,
   };
 });
