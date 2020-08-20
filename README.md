@@ -36,3 +36,7 @@ https://badge.now.sh/hatena/:subject/:url
 ## Contribution
 
 See [Contribution Guide](CONTRIBUTING.md).
+
+## License
+
+Apache License © [Yasuaki Uechi](https://github.com/uetchy) 2020
