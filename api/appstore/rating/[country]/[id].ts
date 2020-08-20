@@ -18,7 +18,7 @@ export default makeBadge(async ({ country, id }) => {
     };
   }
   const rating = parseInt(schema.aggregateRating.ratingValue);
-  const stars = '★'.repeat(rating);
+  const stars = "★".repeat(rating) + "☆".repeat(5 - rating);
 
   return {
     label: "rating",
