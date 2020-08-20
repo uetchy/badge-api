@@ -1,5 +1,5 @@
-import { NowRequest, NowResponse, NowRequestQuery } from '@vercel/node';
-import { badgen } from 'badgen';
+import { NowRequest, NowResponse, NowRequestQuery } from "@vercel/node";
+import { badgen } from "badgen";
 
 export interface BadgenOptions {
   status: string;
@@ -7,36 +7,36 @@ export interface BadgenOptions {
   color?: string;
   label?: string;
   labelColor?: string;
-  style?: 'flat' | 'classic';
+  style?: "flat" | "classic";
   icon?: string;
   iconWidth?: number;
   scale?: number;
 }
 
 export function makeBadge(
-  resolve: (query: NowRequestQuery) => Promise<BadgenOptions> | BadgenOptions,
+  resolve: (query: NowRequestQuery) => Promise<BadgenOptions> | BadgenOptions
 ) {
   return async (req: NowRequest, res: NowResponse) => {
     const isFlat = req.query.flat !== undefined;
     delete req.query.flat;
 
-    res.setHeader('Content-Type', 'image/svg+xml');
+    res.setHeader("Content-Type", "image/svg+xml");
 
     try {
       const badge = badgen({
         ...(await Promise.resolve(resolve(req.query))),
-        style: isFlat ? 'flat' : 'classic',
+        style: isFlat ? "flat" : "classic",
       });
 
-      res.setHeader('Cache-Control', 's-maxage=86400');
+      res.setHeader("Cache-Control", "s-maxage=86400");
       res.send(badge);
     } catch (err) {
       res.send(
         badgen({
-          label: 'error',
-          color: 'gray',
+          label: "error",
+          color: "gray",
           status: err.message,
-        }),
+        })
       );
     }
   };
