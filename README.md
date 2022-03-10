@@ -1,37 +1,37 @@
-# badge.now.sh
+# Badge API
 
 ## Gallery
 
 ### App Store
 
 ```
-https://badge.now.sh/appstore/:subject/:country/:id
+https://badge.vercel.app/appstore/:subject/:country/:id
 ```
 
-| subject      | badge                                                           | url                                                          |
-| ------------ | --------------------------------------------------------------- | ------------------------------------------------------------ |
-| rating       | ![](https://badge.now.sh/appstore/rating/us/id1232780281)       | `https://badge.now.sh/appstore/rating/us/id1232780281`       |
-| rating count | ![](https://badge.now.sh/appstore/rating-count/us/id1232780281) | `https://badge.now.sh/appstore/rating-count/us/id1232780281` |
+| subject      | badge                                                               | url                                                              |
+| ------------ | ------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| rating       | ![](https://badge.vercel.app/appstore/rating/us/id1232780281)       | `https://badge.vercel.app/appstore/rating/us/id1232780281`       |
+| rating count | ![](https://badge.vercel.app/appstore/rating-count/us/id1232780281) | `https://badge.vercel.app/appstore/rating-count/us/id1232780281` |
 
 ### Product Hunt
 
 ```
-https://badge.now.sh/producthunt/:subject/:slug
+https://badge.vercel.app/producthunt/:subject/:slug
 ```
 
-| subject | badge                                               | url                                              |
-| ------- | --------------------------------------------------- | ------------------------------------------------ |
-| upvotes | ![](https://badge.now.sh/producthunt/upvotes/namae) | `https://badge.now.sh/producthunt/upvotes/namae` |
+| subject | badge                                                   | url                                                  |
+| ------- | ------------------------------------------------------- | ---------------------------------------------------- |
+| upvotes | ![](https://badge.vercel.app/producthunt/upvotes/namae) | `https://badge.vercel.app/producthunt/upvotes/namae` |
 
 ### Hatena Bookmark
 
 ```
-https://badge.now.sh/hatena/:subject/:url
+https://badge.vercel.app/hatena/:subject/:url
 ```
 
-| subject        | badge                                        | url                                       |
-| -------------- | -------------------------------------------- | ----------------------------------------- |
-| bookmark count | ![](https://badge.now.sh/hatena/b/namae.dev) | `https://badge.now.sh/hatena/b/namae.dev` |
+| subject        | badge                                            | url                                           |
+| -------------- | ------------------------------------------------ | --------------------------------------------- |
+| bookmark count | ![](https://badge.vercel.app/hatena/b/namae.dev) | `https://badge.vercel.app/hatena/b/namae.dev` |
 
 ## Contribution
 

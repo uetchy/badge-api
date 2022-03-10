@@ -3,7 +3,7 @@
 ## Development Guide
 
 ```bash
-git clone https://github.com/uetchy/badge.now.sh.git && cd badge.now.sh
+git clone https://github.com/uetchy/badge-api.git && cd badge.vercel.app
 npm install
 
 npm i -g vercel
@@ -18,7 +18,7 @@ vc dev
 
 #### File-system routes
 
-If you want your new badge location to be `badge.now.sh/foobar/:baz`, then create a file named `[baz].ts` in `api/foobar`.
+If you want your new badge location to be `badge.vercel.app/foobar/:baz`, then create a file named `[baz].ts` in `api/foobar`.
 
 ```ts
 import { makeBadge } from '../../../lib/badge';
