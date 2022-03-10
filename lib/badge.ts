@@ -1,4 +1,8 @@
-import { NowRequest, NowResponse, NowRequestQuery } from "@vercel/node";
+import {
+  VercelRequest,
+  VercelResponse,
+  VercelRequestQuery,
+} from "@vercel/node";
 import { badgen } from "badgen";
 
 export interface BadgenOptions {
@@ -14,9 +18,9 @@ export interface BadgenOptions {
 }
 
 export function makeBadge(
-  resolve: (query: NowRequestQuery) => Promise<BadgenOptions> | BadgenOptions
+  resolve: (query: VercelRequestQuery) => Promise<BadgenOptions> | BadgenOptions
 ) {
-  return async (req: NowRequest, res: NowResponse) => {
+  return async (req: VercelRequest, res: VercelResponse) => {
     const isFlat = req.query.flat !== undefined;
     delete req.query.flat;
 
@@ -30,7 +34,7 @@ export function makeBadge(
 
       res.setHeader("Cache-Control", "s-maxage=86400");
       res.send(badge);
-    } catch (err) {
+    } catch (err: any) {
       res.send(
         badgen({
           label: "error",
