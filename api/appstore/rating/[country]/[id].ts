@@ -27,7 +27,6 @@ export default makeBadge(async ({ country, id }) => {
   }
 
   const schema = JSON.parse(schemaContent);
-  console.log(schema);
 
   if (!schema.aggregateRating) {
     return makeErrorBadge("unavailable");
