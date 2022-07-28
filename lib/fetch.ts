@@ -1,8 +1,13 @@
 import "cross-fetch/polyfill";
-import { JSDOM } from "jsdom";
 import { GraphQLClient } from "graphql-request";
+import { PatchedRequestInit } from "graphql-request/dist/types";
+import { JSDOM } from "jsdom";
 
-export async function graphql(url: string, query: string, init?: RequestInit) {
+export async function graphql(
+  url: string,
+  query: string,
+  init?: PatchedRequestInit
+) {
   const graphQLClient = new GraphQLClient(url, init);
   return await graphQLClient.request(query);
 }

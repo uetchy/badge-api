@@ -3,7 +3,7 @@
 ## Development Guide
 
 ```bash
-git clone https://github.com/uetchy/badge-api.git && cd badge.vercel.app
+git clone https://github.com/uetchy/badge-api.git && cd badge-api
 npm install
 
 npm i -g vercel
@@ -21,15 +21,15 @@ vc dev
 If you want your new badge location to be `badge.vercel.app/foobar/:baz`, then create a file named `[baz].ts` in `api/foobar`.
 
 ```ts
-import { makeBadge } from '../../../lib/badge';
-import { json } from '../../../lib/fetch';
+import { makeBadge } from "../../../lib/badge";
+import { json } from "../../../lib/fetch";
 
 export default makeBadge(async ({ baz }) => {
   const response = await json(`https://example.com/api?q=${baz}`);
 
   return {
-    label: 'foobar',
-    color: 'magenta',
+    label: "foobar",
+    color: "magenta",
     status: response.status,
   };
 });
